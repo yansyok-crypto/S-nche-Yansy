@@ -1,0 +1,6 @@
+    1  mkdir ~/cli-tarea && cd ~/cli-tarea
+    2  curl -L -o El-arriero.txt https://raw.githubusercontent.com/nidiah/UCES-cli-y-git/main/Linea-de-comandos/El-arriero.txt
+    3  # o
+    4  wget https://raw.githubusercontent.com/nidiah/UCES-cli-y-git/main/Linea-de-comandos/El-arriero.txt
+    5  grep -oi 'vaquitas' El-arriero.txt | wc -l
+    6  history | tail -n 50 > 50-comandos.log
