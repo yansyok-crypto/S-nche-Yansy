@@ -1,6 +1,50 @@
-    1  mkdir ~/cli-tarea && cd ~/cli-tarea
-    2  curl -L -o El-arriero.txt https://raw.githubusercontent.com/nidiah/UCES-cli-y-git/main/Linea-de-comandos/El-arriero.txt
-    3  # o
-    4  wget https://raw.githubusercontent.com/nidiah/UCES-cli-y-git/main/Linea-de-comandos/El-arriero.txt
-    5  grep -oi 'vaquitas' El-arriero.txt | wc -l
-    6  history | tail -n 50 > 50-comandos.log
+    7  mkdir ~/Apellido-Nombre && cd ~/Apellido-Nombre
+    8  git init
+    9  git branch -M main
+   10  git remote add origin https://github.com/yansyok-crypto/Apellido-Nombre.git
+   11  cp ~/cli-tarea/50-comandos.log .
+   12  git add 50-comandos.log
+   13  git commit -m "Agrega 50 comandos"
+   14  git push -u origin main
+   15  https://github.com/yansyok-crypto/S-nche-Yansy.git
+   16  # 1) Crear carpeta y entrar
+   17  mkdir ~/S-nche-Yansy && cd ~/S-nche-Yansy
+   18  # 2) Crear README
+   19  echo "# S-nche-Yansy" > README.md
+   20  # 3) Inicializar git y primer commit
+   21  git init
+   22  git add README.md
+   23  git commit -m "primer commit"
+   24  # 4) Poner el remoto (tu URL)
+   25  git branch -M main
+   26  git remote add origin https://github.com/yansyok-crypto/S-nche-Yansy.git
+   27  # 5) Subir
+   28  git push -u origin main
+   29  cd ~/S-nche-Yansy
+   30  git remote set-url origin https://github.com/yansyok-crypto/S-nche-Yansy.git
+   31  git remote -v     # verifica que apunte bien
+   32  # 1) Copiar el archivo al repo local
+   33  cp ~/cli-tarea/50-comandos.log .
+   34  # 2) Agregar, confirmar y subir
+   35  git add 50-comandos.log
+   36  git commit -m "Agrega 50 comandos"
+   37  git push
+   38  cd ~/cli-tarea
+   39  wc -w El-arriero.txt
+   40  # (en PowerShell: (Get-Content El-arriero.txt | Measure-Object -Word).Words)
+   41  cd ~
+   42  git clone https://github.com/yansyok-crypto/S-nche-Yansy.git
+   43  cd S-nche-Yansy
+   44  ls
+   45  cd ~
+   46  mkdir -p repos && cd repos
+   47  git clone https://github.com/yansyok-crypto/S-nche-Yansy.git S-nche-Yansy-clone
+   48  cd S-nche-Yansy-clone
+   49  ls
+   50  cd ~/cli-tarea
+   51  wc -l 50-comandos.log      # debe mostrar 50
+   52  head -n 3 50-comandos.log  # mira las primeras 3
+   53  tail -n 3 50-comandos.log  # mira las últimas 3
+   54  cd ~/cli-tarea
+   55  history -w                        # guarda historial actual (por las dudas)
+   56  history | tail -n 50 > 50-comandos.log
